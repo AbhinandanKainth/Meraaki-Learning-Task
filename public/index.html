@@ -17,8 +17,20 @@
             <strong>We're sorry but meraaki doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
         <div id="app-5">
+            
+            Type 'all' to get all posts.
+            <input v-model="no">
+            <button v-on:click="getpost(no)">Click Here To get a Post</button>
             <p>{{ message }}</p>
-            <button v-on:click="getpost">Click Here To get a Post</button>
+        </div>
+        <hr>
+        <h7>Add post (POST Req) </h7>
+        <div id="app-6">
+            <input v-model="title_">
+            <input v-model="body_">
+            <input v-model="userId_">
+            <button v-on:click="getpost(title_,body_,userId_)">Add Post</button>
+            <p>{{ message }}</p>
           </div>
 
         <script src="index.js"></script>
